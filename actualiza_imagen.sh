@@ -1,5 +1,4 @@
-#!/bin/bash	                
-                        #!/bin/bash	                
+#!/bin/bash	                               
                         #sh /home/orangepi/ORANGEPI/ejecutar_ImagenActualizada.sh &
                         git pull 
                         sleep 3

@@ -36,28 +36,27 @@ clear
                         ejecutar1=S
                         case $ejecutar1 in
                         [sS]* ) echo ""                       
-                        cd /home/orangepi/ORANGEPI
                         git pull 
                         sleep 3
                         
-                        #sudo chmod 777 ORANGE
+                        cp -R /home/orangepi/ORANGEPI3 /home/orangepi/ORANGEPI
                         clear
                         #cd /home/orangepi/AUTOSTART
                         #git pull
 
-                        sudo usermod -a -G dialout orangepi
-                        sudo usermod -a -G uucp orangepi
-                        cd /home/orangepi/
+                        #sudo usermod -a -G dialout orangepi
+                        #sudo usermod -a -G uucp orangepi
+                        #cd /home/orangepi/
                         
-                        sudo rm -R qt
+                        #sudo rm -R qt
                         
-                        mkdir /home/orangepi/qt
+                        #mkdir /home/orangepi/qt
                         
                         cd /home/orangepi/ORANGEPI
                         
-                        cp qt* /home/orangepi/qt
+                        #cp qt* /home/orangepi/qt
 
-                        chmod 777 -R /home/orangepi/qt
+                        #chmod 777 -R /home/orangepi/qt
 			break;;
 			[nN]* ) echo ""
 clear
