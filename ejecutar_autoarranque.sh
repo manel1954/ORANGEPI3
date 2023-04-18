@@ -6,7 +6,8 @@ sed -i "10c Name[es_ES]=Cerrar Autoarranque" /home/orangepi/Desktop/Autoarranque
 sed -i "15c AUTOARRANQUE=ON" /home/orangepi/status.ini
 
 cd /home/orangepi/qt
-./qt_autoarranque &
+./qt_autoarranque 
+#./qt_autoarranque &
 #./qt_autoarranque_ambe
 
 sed -i "6c Exec=sh ejecutar_autoarranque.sh" /home/orangepi/Desktop/Autoarranque.desktop
