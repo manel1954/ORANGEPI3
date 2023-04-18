@@ -3,7 +3,8 @@
                         #sh /home/orangepi/ORANGEPI/ejecutar_ImagenActualizada.sh &
                         git pull 
                         sleep 3
-                        cp /home/orangepi/ORANGEPI3/* /home/orangepi/ORANGEPI
+                        
+                        cp -R /home/orangepi/ORANGEPI3 /home/orangepi/ORANGEPI
                         clear
                         #cd /home/orangepi/AUTOSTART
                         #git pull
