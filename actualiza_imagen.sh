@@ -9,9 +9,9 @@
                         #cd /home/orangepi/AUTOSTART
                         #git pull
 
-                        sudo usermod -a -G dialout orangepi
-                        sudo usermod -a -G uucp orangepi
-                        cd /home/orangepi/
+                        #sudo usermod -a -G dialout orangepi
+                        #sudo usermod -a -G uucp orangepi
+                        #cd /home/orangepi/
                         
                         #sudo rm -R qt
                         
