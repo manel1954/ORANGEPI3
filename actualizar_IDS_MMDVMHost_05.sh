@@ -1,6 +1,5 @@
 ﻿#!/bin/bash
 
- sh /home/orangepi/ORANGEPI/ejecutar_actualizando_ids.sh & 
 
 
 clear
@@ -29,7 +28,7 @@ echo "\33[1;32m   **************************************************************
 #linea_sed=$numero_linea$letrac
 #
 #
-#echo "$linea_sed"
+#echo "$linea_sed" 
 #read a
 #
 #sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh
