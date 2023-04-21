@@ -6,10 +6,10 @@
 
                         sudo rm -R /home/orangepi/ORANGEPI
                                                 
-                        cp -a /home/orangepi/ORANGEPI3/ /home/orangepi/ORANGEPI
+                        cp -R /home/orangepi/ORANGEPI3/ /home/orangepi/ORANGEPI
                                                 
                         sudo rm -R /home/orangepi/qt
                         
-                        cp -a /home/orangepi/ORANGEPI/qt/ /home/orangepi/
+                        cp - /home/orangepi/ORANGEPI/qt/ /home/orangepi/
 
                         chmod 777 -R /home/orangepi/qt
