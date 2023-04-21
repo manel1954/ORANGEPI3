@@ -41,7 +41,7 @@ clear
                         
                         git pull 
                                                 
-                        cp -R /home/orangepi/ORANGEPI3/* /home/orangepi/ORANGEPI
+                        cp /home/orangepi/ORANGEPI3/* /home/orangepi/ORANGEPI
                                                 
                         cp -R /home/orangepi/ORANGEPI/qt/ /home/orangepi/
 
