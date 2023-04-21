@@ -12,6 +12,7 @@ echo "${VERDE}"
                                 [sS]* ) echo ""
                                 cp -R /home/orangepi/ORANGEPI/Desktop /home/orangepi/
                                 sudo chmod +x -R /home/orangepi/Desktop
+                                DISPLAY=:0.0 xfdesktop --reload
                                 echo "   ********************************************************************"
                                 echo "   *                RESTAURANDO ICONOS DEL ESCRITORIO                 *"
                                 echo "   ********************************************************************"
