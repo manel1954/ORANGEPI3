@@ -72,18 +72,8 @@
 
             cd /home/orangepi/COPIA_SEGURIDAD
             sudo chmod 777 -R /home/orangepi/COPIA_SEGURIDAD
-            
-            tar -zcvf copia.tar.gz *
-            #mv copia.tar.gz /home/orangepi/COPIA_SEGURIDAD
-                      
-            #cd /home/orangepi/COPIA_SEGURIDAD
-            sudo rm *ini*
-            sudo rm *.txt
-            sudo rm *.conf
-            sudo rm *dstar*
-            sudo rm *ircddb*
 
 #cd /var/www/html/upload/files
-cd /home/orangepi/
+cd /home/orangepi/COPIA_SEGURIDAD
 tar -zcvf copia.tar.gz
 cp  copia.tar.gz /var/www/html/upload/files
