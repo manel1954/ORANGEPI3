@@ -1,14 +1,25 @@
 #!/bin/bash	                               
-                                           
-                        cd /home/orangepi/ORANGEPI3/
+                        cd /home/orangepi/.local
+                        git clone http://github.com/manel1954/ORANGEPI3
+
+                        sudo rm -R /home/orangepi/ORANGEPI
                         
-                        git pull
+                        cp -R /home/orangepi/.local/ORANGEPI3 /home/orangepi
                         
+                        cd /home/orangepi
+                        mv ORANGEPI3 ORANGEPI                        
+                        sudo chmod 777 -R ORANGEPI
+                        
+                        cd /home/orangepi/.local
+                        sudo rm -R ORANGEPI3
+                        
+                        cd /home/orangepi/ORANGEPI
                         mv qt_* /home/orangepi/qt/
-
+                  
                         sudo chmod 777 -R /home/orangepi/qt
-
-                        sudo rm qt_*
+                                                
+                        
+    
 
 
 
