@@ -12,4 +12,4 @@
                         
                         cp -R /home/orangepi/ORANGEPI/qt/ /home/orangepi/
 
-                        chmod 777 -R /home/orangepi/qt
+                        chmod 777 -R /home/orangepi/
