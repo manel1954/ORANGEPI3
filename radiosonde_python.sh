@@ -16,7 +16,8 @@ source venv/bin/activate;
 pip install -r requirements.txt
 
 
-sudo cp auto_rx.service /etc/systemd/system/
+sudo cp ~/ORANGEPI/auto_rx.service /etc/systemd/system/
+sudo systemctl daemon-reload
 sudo systemctl enable auto_rx.service
 sudo systemctl start auto_rx.service
 
