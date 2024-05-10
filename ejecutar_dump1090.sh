@@ -9,14 +9,15 @@ ppm=$(awk "NR==44" /home/orangepi/status.ini)
 http=$(awk "NR==46" /home/orangepi/status.ini)
 gain=$(awk "NR==48" /home/orangepi/status.ini)
 beast=$(awk "NR==50" /home/orangepi/status.ini)
+index=$(awk "NR==52" /home/orangepi/status.ini)
 
 if [ "$stick" = 'RSP1' ];then
 xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090_sdrplay/dump1090 --net --interactive --gain $gain --dev-sdrplay
 
 elif [ "$gain" = '-10' ];then
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090/dump1090 --net --interactive --net-ro-port $raw --net-bo-port $beast --gain $gain --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090/dump1090 --device $index --net --interactive --net-ro-port $raw --net-bo-port $beast --gain $gain --ppm $ppm --net-http-port $http
 else
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090/dump1090 --net --interactive --net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090/dump1090 --device $index --net --interactive --net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
 fi
 
 sed -i "6c Exec=sh ejecutar_dump1090.sh" /home/orangepi/Desktop/dump1090.desktop
