@@ -1,6 +1,6 @@
 #!/bin/bash	                               
                                            
-                        cd /home/orangepi/
+                        cd /home/orangepi/ORANGEPI3/
                         
                         git pull
                         
