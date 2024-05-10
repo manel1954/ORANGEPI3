@@ -29,9 +29,10 @@ MARRON="\33[38;5;138m"
                         echo "                         INSTALANDO NOMACHINE                            "
                         echo "***********************************************************************"
                         echo "***********************************************************************"
-                        sleep 2  
+                        sleep 2
+                        cd /home/orangepi
                         wget https://download.nomachine.com/download/8.11/Raspberry/nomachine_8.11.3_3_arm64.deb
-                        sudo dpkg -i nomachine_8.11.3_3_arm64.deb                                             
+                        sudo dpkg -i nomachine_8.11.3_3_arm64.deb                                            
                         clear
                         
                         echo "\v\v\v\v\v\v"
@@ -41,7 +42,8 @@ MARRON="\33[38;5;138m"
                         echo "                  SE HA INSTALADO NOMACHINE CON EXITO                    "
                         echo "***********************************************************************" 
                         echo "***********************************************************************"                      
-                        sed -i "66c NOMACHINE=ON" /home/orangepi/status.ini                        
+                        sed -i "66c NOMACHINE=ON" /home/orangepi/status.ini
+                        sudo rm nomachine_8.11.3_3_arm64.deb*
                         sleep 3
                         fi                       
                        
