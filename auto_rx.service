@@ -4,14 +4,14 @@ After=syslog.target
 
 [Service]
 # For running outside of a python virtual environment
-# ExecStart=/usr/bin/python3 /home/pi/radiosonde_auto_rx/auto_rx/auto_rx.py -t 0 
+# ExecStart=/usr/bin/python3 /home/orangepi/radiosonde_auto_rx/auto_rx/auto_rx.py -t 0 
 
-# For running within a venv, located at /home/pi/radiosonde_auto_rx/auto_rx/venv/
-ExecStart=/home/pi/radiosonde_auto_rx/auto_rx/venv/bin/python3 /home/pi/radiosonde_auto_rx/auto_rx/auto_rx.py -t 0
+# For running within a venv, located at /home/orangepi/radiosonde_auto_rx/auto_rx/venv/
+ExecStart=/home/orangepi/radiosonde_auto_rx/auto_rx/venv/bin/python3 /home/orangepi/radiosonde_auto_rx/auto_rx/auto_rx.py -t 0
 Restart=always
 RestartSec=120
-WorkingDirectory=/home/pi/radiosonde_auto_rx/auto_rx/
-User=pi
+WorkingDirectory=/home/orangepi/radiosonde_auto_rx/auto_rx/
+User=orangepi
 SyslogIdentifier=auto_rx
 
 [Install]
