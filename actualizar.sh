@@ -7,7 +7,7 @@
                         cp -R /home/orangepi/.local/ORANGEPI3 /home/orangepi
                         
                         cd /home/orangepi
-                        mv ORANGEPI3 ORANGEPI                        
+                        cp ORANGEPI3 ORANGEPI                        
                         sudo chmod 777 -R ORANGEPI
                         
                         cd /home/orangepi/.local
