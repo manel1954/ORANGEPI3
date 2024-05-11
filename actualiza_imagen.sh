@@ -10,9 +10,8 @@
                                                 
                         sudo rm -R /home/orangepi/qt
 
-                        sleep 5
-                        
-                        cp -R /home/orangepi/ORANGEPI/qt/ /home/orangepi/
+                                      
+                        cp -R /home/orangepi/ORANGEPI3/qt/ /home/orangepi/
 
                         chmod 777 -R /home/orangepi/ORANGEPI
                         
