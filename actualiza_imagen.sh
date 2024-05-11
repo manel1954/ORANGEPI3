@@ -8,7 +8,7 @@
                                                 
                         cp -R /home/orangepi/ORANGEPI3/ /home/orangepi/ORANGEPI
                                                 
-                        #sudo rm -R /home/orangepi/qt
+                        sudo rm -R /home/orangepi/qt
                         
                         mv -R /home/orangepi/ORANGEPI/qt/ /home/orangepi/
 
