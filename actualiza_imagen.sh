@@ -4,9 +4,11 @@
                         
                         git pull
 
-                        #sudo rm -R /home/orangepi/ORANGEPI
+                        sudo rm -R /home/orangepi/ORANGEPI
+
+                        mkdir /home/orangepi/ORANGEPI
                                                 
-                        cp -R /home/orangepi/ORANGEPI3/ /home/orangepi/ORANGEPI
+                        cp -R /home/orangepi/ORANGEPI3/*.* /home/orangepi/ORANGEPI
                                                 
                         
                         sudo rm -R /home/orangepi/qt
