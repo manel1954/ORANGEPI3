@@ -8,9 +8,9 @@
                                                 
                         cp -R /home/orangepi/ORANGEPI3/ /home/orangepi/ORANGEPI
                                                 
-                        read a
+                        
                         sudo rm -R /home/orangepi/qt
-read a
+
                                       
                         cp -R /home/orangepi/ORANGEPI3/qt/ /home/orangepi/
 
