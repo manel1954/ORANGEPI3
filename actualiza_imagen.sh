@@ -2,7 +2,7 @@
                         #sh /home/orangepi/ORANGEPI/ejecutar_ImagenActualizada.sh &                    
                         cd /home/orangepi/ORANGEPI3
                         
-                        git pull
+                        git pull --force
 
                         sudo rm -R /home/orangepi/ORANGEPI
 
