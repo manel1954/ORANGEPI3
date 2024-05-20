@@ -16,5 +16,5 @@ MARRON="\33[38;5;138m"
                         echo "                  SE HA DESINSTALADO RustDesk CON EXITO                "
                         echo "***********************************************************************" 
                         echo "***********************************************************************"                      
-                        sed -i "15c RustDesk=OFF" /home/orangepi/info.ini            
+                        sed -i "15c RUSTDESK=OFF" /home/orangepi/info.ini            
                         sleep 3
