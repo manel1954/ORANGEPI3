@@ -10,6 +10,7 @@ echo "${VERDE}"
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
+                                sudo rm /home/orangepi/Desktop/*
                                 cp -R /home/orangepi/ORANGEPI/Desktop /home/orangepi/
                                 sudo chmod +x -R /home/orangepi/Desktop
                                 cp /home/orangepi/icons.screen0-1904x1025.rc /home/orangepi/.config/xfce4/desktop/
