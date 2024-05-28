@@ -12,6 +12,11 @@ echo "${VERDE}"
                                 [sS]* ) echo ""
                                 cp -R /home/orangepi/ORANGEPI/Desktop /home/orangepi/
                                 sudo chmod +x -R /home/orangepi/Desktop
+                                cp /home/orangepi/icons.screen0-1904x1025.rc /home/orangepi/.config/xfce4/desktop/
+
+                                sleep 2
+                                xfce4-panel -r
+                                # xfwm4 --replace &
                                 DISPLAY=:0.0 xfdesktop --reload
                                 echo "   ********************************************************************"
                                 echo "   *                RESTAURANDO ICONOS DEL ESCRITORIO                 *"
