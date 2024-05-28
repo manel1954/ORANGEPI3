@@ -18,7 +18,7 @@ echo "${VERDE}"
                                 sleep 2
                                 xfce4-panel -r
                                 # xfwm4 --replace &
-                                DISPLAY=:0.0 xfdesktop --reload
+                                #DISPLAY=:0.0 xfdesktop --reload
                                 echo "   ********************************************************************"
                                 echo "   *                RESTAURANDO ICONOS DEL ESCRITORIO                 *"
                                 echo "   ********************************************************************"
