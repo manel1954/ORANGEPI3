@@ -4,6 +4,9 @@
                         
                         git pull --force
 
+                        cd /home/orangepi/AUTOSTART
+                        git pull --force
+
                         sudo rm -R /home/orangepi/ORANGEPI
 
                         mkdir /home/orangepi/ORANGEPI
