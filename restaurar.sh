@@ -73,7 +73,8 @@ echo "***************************************************"
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
             
-            
+            cp station.cfg /home/orangepi/radiosonde_auto_rx/auto_rx/  # modificado 01-06-2024
+            cp status.ini /home/orangepi/  # modificado 01-06-2024
             
             
             sudo cp ircddbgateway /usr/local/etc/opendv/

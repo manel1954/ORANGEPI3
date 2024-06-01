@@ -51,9 +51,6 @@
             cd  /home/orangepi/NXDNClients/NXDNGateway/
             cp -f NXDNHosts.txt NXDNGateway.ini /home/orangepi/Downloads
             
-            # cd /home/orangepi/bluedv/
-            # cp -f BlueDVconfig.ini /home/orangepi/Downloads 
-
             cd /usr/local/etc/svxlink/
             cp -f svxlink.conf /home/orangepi/Downloads
 
@@ -65,6 +62,10 @@
 
             cd /home/orangepi
             cp info_panel_control.ini /home/orangepi/Downloads
+
+            cp status.ini /home/orangepi/Downloads # modificado 01-06-2024           
+            cd /home/orangepi/radiosonde_auto_rx/auto_rx/ # modificado 01-06-2024
+            cp station.cfg /home/orangepi/Downloads # modificado 01-06-2024
 
 #cd /var/www/html/upload/files
 cd /home/orangepi/
