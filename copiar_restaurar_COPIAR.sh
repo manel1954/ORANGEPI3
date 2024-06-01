@@ -54,9 +54,6 @@
             cd  /home/orangepi/NXDNClients/NXDNGateway/
             cp -f NXDNHosts.txt NXDNGateway.ini /home/orangepi/COPIA_SEGURIDAD
             
-            # cd /home/orangepi/bluedv/
-            # cp -f BlueDVconfig.ini /home/orangepi/COPIA_SEGURIDAD 
-
             cd /usr/local/etc/svxlink/
             cp -f svxlink.conf /home/orangepi/COPIA_SEGURIDAD
 
@@ -68,20 +65,18 @@
 
             cd /home/orangepi
             cp info_panel_control.ini /home/orangepi/COPIA_SEGURIDAD
-
-            # modificado 01-06-2024
-            cd /home/orangepi/radiosonde_auto_rx/auto_rx/
-            cp station.cfg /home/orangepi/COPIA_SEGURIDAD
+            
+            cd /home/orangepi/radiosonde_auto_rx/auto_rx/ # modificado 01-06-2024
+            cp station.cfg /home/orangepi/COPIA_SEGURIDAD # modificado 01-06-2024
 
             cd /home/orangepi/COPIA_SEGURIDAD
             sudo chmod 777 -R /home/orangepi/COPIA_SEGURIDAD
             
             tar -zcvf copia.tar.gz *
-            #mv copia.tar.gz /home/orangepi/COPIA_SEGURIDAD
                       
-            #cd /home/orangepi/COPIA_SEGURIDAD
             sudo rm *ini*
             sudo rm *.txt
             sudo rm *.conf
+            sudo rm *.cfg   # modificado 01-06-2024
             sudo rm *dstar*
             sudo rm *ircddb*
