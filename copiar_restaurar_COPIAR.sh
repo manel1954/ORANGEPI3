@@ -65,7 +65,8 @@
 
             cd /home/orangepi
             cp info_panel_control.ini /home/orangepi/COPIA_SEGURIDAD
-            
+
+            cp status.ini /home/orangepi/COPIA_SEGURIDAD # modificado 01-06-2024           
             cd /home/orangepi/radiosonde_auto_rx/auto_rx/ # modificado 01-06-2024
             cp station.cfg /home/orangepi/COPIA_SEGURIDAD # modificado 01-06-2024
 
