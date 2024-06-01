@@ -35,28 +35,22 @@
             sudo cp -f MMDVMFUSION.ini /home/orangepi/MMDVMHost
             #fin  Dstar y solo Fusion
 
-
             cp -f YSF2DMR.ini /home/orangepi/YSF2DMR
             cp -f YSF2DMR.ini_copia_01 /home/orangepi/YSF2DMR
             cp -f YSF2DMR.ini_copia_02 /home/orangepi/YSF2DMR
             cp -f YSF2DMR.ini_copia_03 /home/orangepi/YSF2DMR
             cp -f YSF2DMR.ini_copia_04 /home/orangepi/YSF2DMR
-            
-            
+                       
             cp -f TG-YSFList.txt /home/orangepi/DMR2YSF
             sudo cp -f YSFGateway.ini /home/orangepi/YSFClients/YSFGateway/
-
-         
+       
             cp -f NXDNGateway.ini /home/orangepi/NXDNClients/NXDNGateway/        
             cp -f NXDNHosts.txt NXDNGateway.ini /home/orangepi/NXDNClients/NXDNGateway/
 
-            # sudo cp -f BlueDVconfig.ini /home/orangepi/bluedv/
-
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
-            
-            # modificado 01-06-2024
-            cp station.cfg /home/orangepi/radiosonde_auto_rx/auto_rx/
+                     
+            cp station.cfg /home/orangepi/radiosonde_auto_rx/auto_rx/  # modificado 01-06-2024
                         
             sudo cp ircddbgateway /usr/local/etc/opendv/
             sudo cp dstarrepeater /usr/local/etc/opendv/
@@ -67,6 +61,7 @@
             sudo rm *ini*
             sudo rm *.txt
             sudo rm *.conf
+            sudo rm *.cfg # modificado 01-06-2024
             sudo rm *dstar*
             sudo rm *ircddb*
             
