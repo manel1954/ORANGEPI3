@@ -52,19 +52,16 @@
 
             # sudo cp -f BlueDVconfig.ini /home/orangepi/bluedv/
 
-
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
             
-            
-            
-            
+            # modificado 01-06-2024
+            cp station.cfg /home/orangepi/radiosonde_auto_rx/auto_rx/
+                        
             sudo cp ircddbgateway /usr/local/etc/opendv/
             sudo cp dstarrepeater /usr/local/etc/opendv/
 
-
             cp info_panel_control.ini /home/orangepi/
-
 
             cd /home/orangepi/COPIA_SEGURIDAD
             sudo rm *ini*

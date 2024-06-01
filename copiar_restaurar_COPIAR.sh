@@ -69,6 +69,10 @@
             cd /home/orangepi
             cp info_panel_control.ini /home/orangepi/COPIA_SEGURIDAD
 
+            # modificado 01-06-2024
+            cd /home/orangepi/radiosonde_auto_rx/auto_rx/
+            cp station.cfg /home/orangepi/COPIA_SEGURIDAD
+
             cd /home/orangepi/COPIA_SEGURIDAD
             sudo chmod 777 -R /home/orangepi/COPIA_SEGURIDAD
             
