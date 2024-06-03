@@ -5,7 +5,7 @@ echo""
 echo""
 neofetch &
 
-sleep 5
+sleep 20
 
 
 
