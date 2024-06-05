@@ -11,7 +11,7 @@ MARRON="\33[38;5;138m"
 
                         # Comprueba si NOMACHINE está instalado
                         estado_nomachine=$(awk "NR==66" /home/orangepi/status.ini)
-                        if [ "$estado_nomachine" = NOMACHINE=ON ];then
+                        if [ "$estado_nomachine" ="NOMACHINE=ON" ];then
                         echo "\v\v\v\v\v\v"
                         echo "${ROJO}"
                         echo "***********************************************************************"
