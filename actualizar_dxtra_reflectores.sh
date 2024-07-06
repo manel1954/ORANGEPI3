@@ -28,6 +28,6 @@ echo "${VERDE}"
                                 clear
                                 exit;
                                 break;;
-                                esac﻿#!/bin/bash
+                                esac﻿
                      
 
