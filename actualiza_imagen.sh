@@ -18,7 +18,7 @@
                                       
                         cp -R /home/orangepi/ORANGEPI3/qt/ /home/orangepi/
 
-                        sudo chmod 777 -R /home/orangepi/ORANGEPIsudo chmod 777 -R /home/orangepi/qt
+                        sudo chmod 777 -R /home/orangepi/ORANGEPI
                         
                         sudo chmod 777 -R /home/orangepi/qt
 
