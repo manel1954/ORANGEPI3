@@ -19,7 +19,7 @@ echo "${VERDE}"
                                 xfce4-panel -r
                                 # xfwm4 --replace &
                                 xfdesktop --reload
-                                xfce4-panel &
+
                                 echo "   ********************************************************************"
                                 echo "   *                RESTAURANDO ICONOS DEL ESCRITORIO                 *"
                                 echo "   ********************************************************************"
@@ -29,6 +29,8 @@ echo "${VERDE}"
                                 echo "   ********************************************************************"
                                 echo "   *                  PROCESO EFECTUADO CORRECTAMENTE                 *"
                                 echo "   ********************************************************************"
+                                
+                                xfce4-panel &
                                 sleep 3
                                 break;;
                                 [nN]* ) echo ""
