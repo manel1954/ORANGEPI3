@@ -9,6 +9,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
                         cd /home/orangepi/Downloads
+                        sudo apt update
                         wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3-2/rustdesk-1.2.3-2-aarch64.deb
                         sudo dpkg -i rustdesk-1.2.3-2-aarch64.deb
                         sudo apt -f install
