@@ -31,7 +31,6 @@ MARRON="\33[38;5;138m"
                         echo "***********************************************************************"
                         sleep 2
                         cd /home/orangepi
-                        sudo apt update
                         wget https://download.nomachine.com/download/8.11/Raspberry/nomachine_8.11.3_3_arm64.deb
                         sudo dpkg -i nomachine_8.11.3_3_arm64.deb                                            
                         clear
