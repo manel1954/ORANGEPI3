@@ -1,4 +1,5 @@
-﻿#!/bin/bash
+﻿
+3#!/bin/bash
 
             cd /home/orangepi/MMDVMHost
             cp -f TODOS_LOS_INIS.ini /home/orangepi/Downloads
@@ -67,6 +68,9 @@
             cd /home/orangepi/radiosonde_auto_rx/auto_rx/ # modificado 01-06-2024
             cp station.cfg /home/orangepi/Downloads # modificado 01-06-2024
 
+            cd /var/lib/openwebrx/ # modificado 11-07-2024
+            cp settings.json /home/orangepi/Downloads # modificado 11-07-2024
+            
 #cd /var/www/html/upload/files
 cd /home/orangepi/
 tar -zcvf copia.tar.gz Downloads
