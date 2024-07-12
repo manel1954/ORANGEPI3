@@ -1,5 +1,5 @@
 #!/bin/bash	                               
-                        #sh /home/orangepi/ORANGEPI/ejecutar_ImagenActualizada.sh &                    
+                                          
                         cd /home/orangepi/ORANGEPI3
                         
                         git pull --force

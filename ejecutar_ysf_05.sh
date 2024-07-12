@@ -15,14 +15,6 @@ sed -i "11c Name[es_ES]=Cerrar YSF" /home/orangepi/Desktop/YSFGateway.desktop
 sed -i "3c YSF=ON" /home/orangepi/status.ini
 
 cd /home/orangepi/YSFClients/YSFGateway
-echo "{$MARRON}"
-clear
-echo "***********************************************************"
-echo "*                 YSFGateway                              * "
-echo "***********************************************************"
-sleep 3
 
-sudo ./YSFGateway YSFGateway.ini
-#=========================
-
+xterm -geometry 86x16+1277+803 -bg brown -fg white -fa 'roboto' -fs 9x -T YSFGateway -e sudo ./YSFGateway YSFGateway.ini
 

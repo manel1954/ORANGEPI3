@@ -81,4 +81,4 @@ echo "***************************************************"
             sudo cp ircddbgateway /usr/local/etc/opendv/
             sudo cp dstarrepeater /usr/local/etc/opendv/
 
-            cp info_panel_control.ini /home/orangepi/          		
+            cp info_panel_control.ini /home/orangepi/               
