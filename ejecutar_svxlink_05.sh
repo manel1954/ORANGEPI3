@@ -15,7 +15,7 @@ sed -i "4c Name[es_ES]=Cerrar SVXLINK" /home/orangepi/Desktop/Abrir_SVXLink.desk
 sed -i "8c SVXLINK=ON" /home/orangepi/status.ini
 
 # sudo svxlink
-xterm -geometry 69x29+700+48 -bg blue -fg white -fa ‘verdana’ -fs 9x -T SVXLINK -e sudo svxlink
+xterm -geometry 69x29+725+48 -bg blue -fg white -fa ‘verdana’ -fs 9x -T SVXLINK -e sudo svxlink
 
 sed -i "6c Exec=sh ejecutar_svxlink_05.sh" /home/orangepi/Desktop/Abrir_SVXLink.desktop
 sed -i "7c Icon=/home/orangepi/ORANGEPI/DMRPLUS_EDITOR.png" /home/orangepi/Desktop/Abrir_SVXLink.desktop
