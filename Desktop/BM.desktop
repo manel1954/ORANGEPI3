@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Brandmeister
+Name=Abrir BM
 Comment=
 Exec=sh ejecutar_bm_05.sh
 Icon=/home/orangepi/ORANGEPI/DMR.png

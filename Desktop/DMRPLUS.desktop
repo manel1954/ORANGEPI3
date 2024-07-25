@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=DMR Plus
+Name=Abrir DMR+
 Comment=
 Exec=sh ejecutar_plus_05.sh
 Icon=/home/orangepi/ORANGEPI/ICONO_DMRPLUS.png

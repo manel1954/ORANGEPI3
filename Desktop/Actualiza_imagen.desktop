@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Display
+Name=Actualizar IMAGEN
 Comment=
 Exec=./qt_actualizar_imagen
 Icon=/home/orangepi/ORANGEPI/ICONO_ACTUALIZAR.png
