@@ -1,5 +1,5 @@
 #!/bin/bash
-sed -i "6 Exec=sh cerrar_mmdvm_05.sh" /home/orangepi/Desktop/MMDVM.desktop
+sed -i "6c Exec=sh cerrar_mmdvm_05.sh" /home/orangepi/Desktop/MMDVM.desktop
 sed -i "7c Icon=/home/orangepi/ORANGEPI/MMDVM_ON.png" /home/orangepi/Desktop/MMDVM.desktop
 sed -i "4c Name[es_ES]=Cerrar Radio" /home/orangepi/Desktop/MMDVM.desktop
 
