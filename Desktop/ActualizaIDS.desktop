@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=ActualizaIDS
 Comment=
-Exec=mate-terminal --geometry 74x4+696+50 --title=ACTUALIZAR_IDS -x sh actualizar_IDS_MMDVMHost_05.sh
+Exec=mate-terminal --geometry 74x3+696+50 --title=ACTUALIZAR_IDS -x sh actualizar_IDS_MMDVMHost_05.sh
 Icon=/home/orangepi/ORANGEPI/UPDATE.png
 Path=/home/orangepi/ORANGEPI
 Terminal=false
