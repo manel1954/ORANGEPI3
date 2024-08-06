@@ -14,7 +14,7 @@ sed -i "13c SOLODSTAR=ON" /home/orangepi/status.ini
 x=$(awk "NR==94" /home/orangepi/status.ini)
 cd /home/orangepi/MMDVMHost
 echo "{$VERDE}"
-xterm -geometry 86x16+$X+803 -bg black -fg green -fa 'roboto' -fs 9x -T DSTAR -e sudo ./MMDVMDSTAR MMDVMDSTAR.ini & 
+xterm -geometry 86x16+$x+803 -bg black -fg green -fa 'roboto' -fs 9x -T DSTAR -e sudo ./MMDVMDSTAR MMDVMDSTAR.ini & 
 
 cd /home/orangepi/ORANGEPI
 sh ejecutar_d-star_05.sh
