@@ -13,8 +13,9 @@ sed -i "10c Name[es_ES]=Cerrar  ESPECIAL" /home/orangepi/Desktop/Abrir_ESPECIAL.
 
 sed -i "10c MMDVMESPECIAL=ON" /home/orangepi/status.ini
 
+x=$(awk "NR==92" /home/orangepi/status.ini)
 cd /home/orangepi/MMDVMHost
-xterm -geometry 86x16+1277+803 -bg black -fg yellow -fa 'roboto' -fs 9x -T ESPECIAL -e sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
+xterm -geometry 86x16+$x+803 -bg black -fg yellow -fa 'roboto' -fs 9x -T ESPECIAL -e sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
 
 sudo killall MMDVMESPECIAL
 cd /home/orangepi/ORANGEPI
