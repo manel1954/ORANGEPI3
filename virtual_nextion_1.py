@@ -12,7 +12,7 @@ SERIAL_PORT = "/dev/virtual10"  # Ajusta para que coincida con el puerto de soca
 BAUD_RATE = 9600
 
 # Configuración de la ventana de Tkinter
-WINDOW_TITLE = "MMDVMHost Virtual Nextionxxxx"
+WINDOW_TITLE = "MMDVMHost Virtual Nextion"
 WINDOW_SIZE = "480x269+700+50"  # Dimensiones fijas
 WINDOW_BG_COLOR = "#152637"
 
