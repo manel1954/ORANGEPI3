@@ -13,7 +13,7 @@ BAUD_RATE = 9600
 
 # Configuración de la ventana de Tkinter
 WINDOW_TITLE = "MMDVMHost Virtual Nextion"
-WINDOW_SIZE = "480x269+23+95"  # Dimensiones fijas
+WINDOW_SIZE = "480x260+8+367"  # Dimensiones fijas
 WINDOW_BG_COLOR = "#152637"
 
 # Crear ventana principal
@@ -25,8 +25,8 @@ root.resizable(False, False)
 
 # Agregar un borde azul de 3px alrededor de la ventana
 root.config(
-highlightbackground="#1E90FF",  # Color del borde azul
-highlightthickness=4  # Grosor del borde
+    highlightbackground="#1E90FF",  # Color del borde azul
+    highlightthickness=4  # Grosor del borde
 )
 
 # Configuración de las columnas para que se distribuyan equitativamente
@@ -38,11 +38,12 @@ root.rowconfigure(0, weight=0)
 
 # Diccionario de configuración de etiquetas
 LABEL_CONFIGS = {
-    "Frecuencia RX": {"fg": "#77DD77", "font": ("Arial", 12, "bold"), "row": 2, "column": 0},
-    "Frecuencia TX": {"fg": "pink", "font": ("Arial", 12, "bold"), "row": 2, "column": 1},
+    "Frecuencia RX": {"fg": "#77DD77", "font": ("Arial", 11, "bold"), "row": 2, "column": 0},
+    "Frecuencia TX": {"fg": "pink", "font": ("Arial", 11, "bold"), "row": 2, "column": 1},
     "IP": {"fg": "white", "font": ("Arial", 12, "bold"), "row": 3, "column": 0},
     "Estado": {"fg": "white", "font": ("Arial", 12, "bold"), "row": 3, "column": 1},
     "Ber": {"fg": "yellow", "font": ("Arial", 12, "bold"), "row": 4, "column": 0},
+    "LH": {"fg": "orange", "font": ("Arial", 11, "bold"), "row": 0, "column": 0},
     "RSSI": {"fg": "yellow", "font": ("Arial", 12, "bold"), "row": 4, "column": 1},
     "Temp": {"fg": "#ff5722", "font": ("Arial", 10, "bold"), "row": 5, "column": 0},
     "TG": {"fg": "#00adb5", "font": ("Arial", 10, "bold"), "row": 5, "column": 1},
@@ -51,17 +52,38 @@ LABEL_CONFIGS = {
 # Contenedor de etiquetas
 labels = {}
 
-
-
-# Agregar las otras etiquetas a la cuadrícula
+# Agregar las etiquetas con bordes
 for label_name, config in LABEL_CONFIGS.items():
-    label = tk.Label(root, text=f"{label_name}: N/A", bg=WINDOW_BG_COLOR, fg=config["fg"], font=config["font"])
+    if label_name in ["Frecuencia RX", "Frecuencia TX"]:
+        label = tk.Label(
+            root, 
+            text=f"{label_name}: N/A", 
+            bg=WINDOW_BG_COLOR, 
+            fg=config["fg"], 
+            font=config["font"], 
+            highlightbackground="orange",  # Borde naranja
+            highlightthickness=1          # Grosor del borde
+        )
+    elif label_name == "LH":
+        label = tk.Label(
+            root,
+            text=f"{label_name}: N/A",
+            bg=WINDOW_BG_COLOR,
+            fg=config["fg"],
+            font=config["font"],
+            highlightbackground="orange",  # Borde blanco
+            highlightthickness=2          # Grosor del borde
+        )
+    else:
+        label = tk.Label(
+            root, 
+            text=f"{label_name}: N/A", 
+            bg=WINDOW_BG_COLOR, 
+            fg=config["fg"], 
+            font=config["font"]
+        )
     label.grid(row=config["row"], column=config["column"], padx=10, pady=5, sticky="nsew")
     labels[label_name] = label
-
-
-
-
 
 # Crear la etiqueta "Estación" con un borde azul
 estacion_label = tk.Label(
@@ -69,17 +91,11 @@ estacion_label = tk.Label(
     text="", 
     bg=WINDOW_BG_COLOR, 
     fg="#00adb5", 
-    font=("Arial", 26, "bold"),
+    font=("Arial", 16, "bold"),
     highlightbackground="#1E90FF",  # Borde azul
     highlightthickness=2          # Grosor del borde
 )
-estacion_label.grid(row=0, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
-
-
-
-
-
-
+estacion_label.grid(row=0, column=1, columnspan=2, padx=10, pady=5, sticky="nsew")
 
 # Crear la etiqueta "Fecha y Hora" (TX/RX)
 txrx_label = tk.Label(
@@ -92,31 +108,6 @@ txrx_label = tk.Label(
     highlightthickness=2          # Grosor del borde
 )
 txrx_label.grid(row=1, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
-
-
-
-# Agregar las etiquetas con bordes naranga para Frecuencia RX y Frecuencia TX
-for label_name, config in LABEL_CONFIGS.items():
-    if label_name in ["Frecuencia RX", "Frecuencia TX"]:
-        label = tk.Label(
-            root, 
-            text=f"{label_name}: N/A", 
-            bg=WINDOW_BG_COLOR, 
-            fg=config["fg"], 
-            font=config["font"], 
-            highlightbackground="orange",  # Borde naranja
-            highlightthickness=1          # Grosor del borde
-        )
-    else:
-        label = tk.Label(
-            root, 
-            text=f"{label_name}: N/A", 
-            bg=WINDOW_BG_COLOR, 
-            fg=config["fg"], 
-            font=config["font"]
-        )
-    label.grid(row=config["row"], column=config["column"], padx=10, pady=5, sticky="nsew")
-    labels[label_name] = label
 
 # Abre el puerto serie una vez
 try:
@@ -181,6 +172,7 @@ def parse_data(data_str):
         "IP": r'\b1t3.txt="([^"]+)"\b',
         "Estado": r'\b1t0.txt="([^"]+)"\b',
         "Ber": r't[47]\.txt="([^"]+)"',
+        "LH": r'50t[02]\.txt="([^"]+)"',
         "RSSI": r't[35]\.txt="([^"]+)"',
         "Temp": r'\b1t20.txt="([^"]+)"\b',
         "TG": r'\b1t[13]\.txt="([^"]+)"\b',
@@ -190,20 +182,14 @@ def parse_data(data_str):
         match = re.search(pattern, data_str)
         if match:
             value = match.group(1)
-
             if key == "RSSI" and '-' not in value:
                 continue
             if key == "IP" and ':' not in value:
                 continue
-            #if key == "TG" and 'TG' not in value:
-             #   continue  
-            #if key == "TG" and 'DG' not in value:
-             #   continue  
+            if key == "Ber" and '%' not in value:
+                continue
             if key == "Fecha y Hora" and ':' not in value:
-                continue        
-            
-                      
-            
+                continue
             result[key] = value
 
     return result
