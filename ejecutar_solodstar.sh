@@ -9,19 +9,19 @@ MARRON="\33[38;5;138m"
 sed -i "6c Exec=sh cerrar_solodstar.sh" /home/orangepi/Desktop/AbrirsoloDstar.desktop
 sed -i "7c Icon=/home/orangepi/ORANGEPI/SOLO_D-STAR_ON.png" /home/orangepi/Desktop/AbrirsoloDstar.desktop
 sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/orangepi/Desktop/AbrirsoloDstar.desktop
+
 sed -i "13c SOLODSTAR=ON" /home/orangepi/status.ini
 
-x=$(awk "NR==94" /home/orangepi/status.ini)
 cd /home/orangepi/MMDVMHost
 echo "{$VERDE}"
-xterm -geometry 86x16+$x+803 -bg black -fg green -fa 'roboto' -fs 9x -T DSTAR -e sudo ./MMDVMDSTAR MMDVMDSTAR.ini & 
 
+sudo ./MMDVMDSTAR MMDVMDSTAR.ini & 
 cd /home/orangepi/ORANGEPI
 sh ejecutar_d-star_05.sh
 
-# sed -i "6c Exec=sh ejecutar_solodstar.sh" /home/orangepi/Desktop/AbrirsoloDstar.desktop
-# sed -i "7c Icon=/home/orangepi/ORANGEPI/SOLO_D-STAR.png" /home/orangepi/Desktop/AbrirsoloDstar.desktop
-# sed -i "11c Name[es_ES]=Abrir solo D-STAR" /home/orangepi/Desktop/AbrirsoloDstar.desktop
-# sed -i "13c SOLODSTAR=OFF" /home/orangepi/status.ini
+sed -i "6c Exec=sh ejecutar_solodstar.sh" /home/orangepi/Desktop/AbrirsoloDstar.desktop
+sed -i "7c Icon=/home/orangepi/ORANGEPI/SOLO_D-STAR.png" /home/orangepi/Desktop/AbrirsoloDstar.desktop
+sed -i "11c Name[es_ES]=Abrir solo D-STAR" /home/orangepi/Desktop/AbrirsoloDstar.desktop
+sed -i "13c SOLODSTAR=OFF" /home/orangepi/status.ini
 
  
