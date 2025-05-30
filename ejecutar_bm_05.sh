@@ -5,8 +5,10 @@ sed -i "10c Name[es_ES]=Cerrar BM" /home/orangepi/Desktop/BM.desktop
 
 sed -i "7c MMDVMBM=ON" /home/orangepi/status.ini
 
+x=$(awk "NR==90" /home/orangepi/status.ini)
 cd /home/orangepi/MMDVMHost
-xterm -geometry 85x16+655+803 -bg brown -fg white -fa 'roboto' -fs 9x -T BRANDMEISTER -e sudo ./MMDVMBM MMDVMBM.ini
+xterm -geometry 85x16+$x+803 -bg brown -fg white -fa 'roboto' -fs 9x -T BRANDMEISTER -e sudo ./MMDVMBM MMDVMBM.ini
+
 sudo killall MMDVMBM
 cd /home/orangepi/ORANGEPI
 sed -i "7c MMDVMBM=OFF" /home/orangepi/status.ini
