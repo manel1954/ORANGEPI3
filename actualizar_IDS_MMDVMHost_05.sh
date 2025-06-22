@@ -17,7 +17,7 @@ echo "\33[1;32m   **************************************************************
 
 cd /home/orangepi/MMDVMHost
 sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
-cp DMRIds.dat /home/orangepi/MMDVMHost/
+#cp DMRIds.dat /home/orangepi/MMDVMHost/
 sudo chmod 777 /home/orangepi/MMDVMHost/DMRIds
 
 cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2NXDN
