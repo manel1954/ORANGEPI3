@@ -1,41 +1,24 @@
 ﻿#!/bin/bash
 
-
-
 clear
 echo " "
 echo "\33[1;32m   ********************************************************************"
 echo "\33[1;32m   ******************** ACTUALIZANDO IDS INDICATIVOS ******************"
 echo "\33[1;32m   ********************************************************************"
-#sleep 10
-#var=`grep -n -m 1 '\<DMRIDPATH\>' /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh`
-#buscar=":"
-#largo_linea=`expr index $var $buscar`
-#largo_linea=`expr $largo_linea - 1`
-#numero_linea=`expr substr $var 1 $largo_linea`
-#letrac=c
-#linea_sed=$numero_linea$letrac
-#echo "$linea_sed"
-#read a
-#sed -i "$linea_sed DMRIDPATH=/home/orangepi/MMDVMHost" /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh
-#
-## DMR IDs now served by RadioID.net 
-#var=`grep -n -m 1 '\<DATABASEURL\>' /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh`
-#buscar=":"
-#largo_linea=`expr index $var $buscar`
-#largo_linea=`expr $largo_linea - 1`
-#numero_linea=`expr substr $var 1 $largo_linea`
-#letrac=c
-#linea_sed=$numero_linea$letrac
-#
-#
-#echo "$linea_sed" 
-#read a
-#
-#sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh
 
-sudo sh /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh
+#sudo sh /home/orangepi/MMDVMHost/linux/DMRIDUpdate.sh
 
-cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2NXDN
-cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2YSF
-cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/YSF2DMR
+#cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2NXDN
+#cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2YSF
+#cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/YSF2DMR
+
+
+                        # Cambio realizado el 22-06-2025 para actualizar los IDS en MMDVMHost
+                        cd /home/orangepi/MMDVMHost
+                        sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
+                        cp DMRIds.dat /home/orangepi/MMDVMHost/
+                        sudo chmod 777 /home/orangepi/MMDVMHost/DMRIds.dat
+
+                        cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2NXDN
+                        cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/DMR2YSF
+                        cp /home/orangepi/MMDVMHost/DMRIds.dat /home/orangepi/YSF2DMR
