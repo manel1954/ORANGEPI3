@@ -11,3 +11,6 @@
                         sudo chmod 777 -R /home/orangepi/ORANGEPI                        
                         sudo chmod 777 -R /home/orangepi/qt
                         sudo chmod 777 -R /home/orangepi/AUTOSTART
+
+                        cp -R /home/orangepi/ORANGEPI/esp32 /home/orangepi/
+                        sudo chmod +x -R /home/orangepi/esp32
