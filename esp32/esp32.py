@@ -335,7 +335,7 @@ btn_programar.grid(row=8, column=1, padx=5, pady=15)
 btn_salir = tk.Button(frame, text="Salir", bg="navy", fg="white", font=(FONT[0], 9), width=8, command=root.destroy)
 btn_salir.grid(row=8, column=1, sticky="e", padx=5, pady=15)
 
-btn_ayuda = tk.Button(root, text="? Ayuda", command=mostrar_ayuda, bg="#007acc", fg="white", font=FONT)
+btn_ayuda = tk.Button(root, text="❓ Ayuda", command=mostrar_ayuda, bg="#007acc", fg="white", font=FONT)
 btn_ayuda.pack(pady=(0, 10))
 
 
