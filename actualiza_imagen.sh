@@ -12,6 +12,8 @@
                         sudo chmod 777 -R /home/orangepi/qt
                         sudo chmod 777 -R /home/orangepi/AUTOSTART
 
+                        sudo rm /home/orangepi/esp32/*.*
                         sudo rm -R /home/orangepi/esp32/esp32_nextion
-                        cp -R /home/orangepi/ORANGEPI/esp32 /home/orangepi/
-                        sudo chmod +x -R /home/orangepi/esp32
+                        sudo rm -R /home/orangepi/esp32/esp32_openweather
+                        sudo cp -R /home/orangepi/ORANGEPI/esp32 /home/orangepi/
+                        sudo chmod 777 -R /home/orangepi/esp32
