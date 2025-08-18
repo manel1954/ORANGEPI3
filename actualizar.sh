@@ -18,6 +18,7 @@
                   
                         sudo chmod 777 -R /home/orangepi/qt
                                                 
+                                                
                         
     
 
