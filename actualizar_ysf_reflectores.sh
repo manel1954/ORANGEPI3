@@ -1,5 +1,28 @@
 #!/bin/bash		        
-			echo "\33[1;32m ACTUALIZANDO REFLECTORES YSF"	
-			cd /home/orangepi/YSFClients/YSFGateway
-			sudo rm YSFHosts.txt
-			sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+#Colores
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+MARRON="\33[38;5;138m"
+
+			# ACTUALIZAR REFLECTORES YSF desde mi github
+			#==============================================================
+			#cp /home/pi/A108/YSFHosts.txt /home/pi/YSFClients/YSFGateway/
+			#sleep 3			
+			#clear
+			#echo "${VERDE}***********************************************"
+			#		echo "*  ACTUALIZANDO REFLECTORES YSF               *"
+			#		echo "***********************************************"
+			#sleep 3
+			#==============================================================
+
+
+			cd /home/orangepi/
+            wget --user-agent="YSFGateway" https://hostfiles.refcheck.radio/YSFHosts.txt
+            sudo mv /home/orangepi/YSFHosts.txt /home/orangepi/YSFClients/YSFGateway/
+			sleep 3		
+
+			
